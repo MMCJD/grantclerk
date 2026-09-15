@@ -1,0 +1,5 @@
+body { font-family: Arial, sans-serif; margin: 0; background: #f7f7f7; color: #333; }
+header { text-align: center; padding: 40px; background: #fff; }
+.button { display: inline-block; padding: 12px 20px; background: #0070f3; color: #fff; text-decoration: none; border-radius: 6px; margin-top: 20px; }
+.features ul { list-style: none; padding: 0; text-align: center; }
+.template-card { background: #fff; padding: 20px; margin: 20px auto; width: 80%; border-radius: 8px; }

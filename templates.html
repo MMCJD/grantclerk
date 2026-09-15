@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GrantClerk Templates</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Grant Templates</h1>
+    <p>Generated from API ingestion and updated automatically.</p>
+  </header>
+
+  <section id="template-list"></section>
+
+  <script>
+    async function loadTemplates() {
+      const res = await fetch('/api/templates');
+      const templates = await res.json();
+      const container = document.getElementById('template-list');
+
+      container.innerHTML = templates.map(t => `
+        <div class="template-card">
+          <h3>${t.title}</h3>
+          <p>${t.description}</p>
+          <a class="button" href="${t.downloadUrl}">Download</a>
+        </div>
+      `).join('');
+    }
+
+    loadTemplates();
+  </script>
+</body>
+</html>
